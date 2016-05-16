@@ -20,6 +20,12 @@
 		E5A706BA1CE9185E0025D569 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A706B91CE9185E0025D569 /* ExtensionDelegate.swift */; };
 		E5A706BC1CE9185E0025D569 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A706BB1CE9185E0025D569 /* NotificationController.swift */; };
 		E5A706BE1CE9185E0025D569 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5A706BD1CE9185E0025D569 /* Assets.xcassets */; };
+		E5A706D11CE9370D0025D569 /* pasaValor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A706D01CE9370D0025D569 /* pasaValor.swift */; };
+		E5A706D31CE938400025D569 /* vistaSeleccionMasaInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A706D21CE938400025D569 /* vistaSeleccionMasaInterfaceController.swift */; };
+		E5A706D51CE952420025D569 /* vistaSeleccionQuesoInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A706D41CE952420025D569 /* vistaSeleccionQuesoInterfaceController.swift */; };
+		E5A706D71CE969300025D569 /* vistaSeleccionIngredientes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A706D61CE969300025D569 /* vistaSeleccionIngredientes.swift */; };
+		E5A706D91CE97A0E0025D569 /* vistaConfirmacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A706D81CE97A0E0025D569 /* vistaConfirmacion.swift */; };
+		E5A706DB1CE9846F0025D569 /* vistaFinal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A706DA1CE9846F0025D569 /* vistaFinal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +89,12 @@
 		E5A706BB1CE9185E0025D569 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		E5A706BD1CE9185E0025D569 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5A706BF1CE9185E0025D569 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5A706D01CE9370D0025D569 /* pasaValor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pasaValor.swift; sourceTree = "<group>"; };
+		E5A706D21CE938400025D569 /* vistaSeleccionMasaInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaSeleccionMasaInterfaceController.swift; sourceTree = "<group>"; };
+		E5A706D41CE952420025D569 /* vistaSeleccionQuesoInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaSeleccionQuesoInterfaceController.swift; sourceTree = "<group>"; };
+		E5A706D61CE969300025D569 /* vistaSeleccionIngredientes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaSeleccionIngredientes.swift; sourceTree = "<group>"; };
+		E5A706D81CE97A0E0025D569 /* vistaConfirmacion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaConfirmacion.swift; sourceTree = "<group>"; };
+		E5A706DA1CE9846F0025D569 /* vistaFinal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaFinal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +167,12 @@
 				E5A706BD1CE9185E0025D569 /* Assets.xcassets */,
 				E5A706BF1CE9185E0025D569 /* Info.plist */,
 				E5A706B51CE9185E0025D569 /* Supporting Files */,
+				E5A706D01CE9370D0025D569 /* pasaValor.swift */,
+				E5A706D21CE938400025D569 /* vistaSeleccionMasaInterfaceController.swift */,
+				E5A706D41CE952420025D569 /* vistaSeleccionQuesoInterfaceController.swift */,
+				E5A706D61CE969300025D569 /* vistaSeleccionIngredientes.swift */,
+				E5A706D81CE97A0E0025D569 /* vistaConfirmacion.swift */,
+				E5A706DA1CE9846F0025D569 /* vistaFinal.swift */,
 			);
 			path = "pizzaAppW WatchKit Extension";
 			sourceTree = "<group>";
@@ -311,9 +329,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5A706D31CE938400025D569 /* vistaSeleccionMasaInterfaceController.swift in Sources */,
+				E5A706D91CE97A0E0025D569 /* vistaConfirmacion.swift in Sources */,
+				E5A706D71CE969300025D569 /* vistaSeleccionIngredientes.swift in Sources */,
+				E5A706D51CE952420025D569 /* vistaSeleccionQuesoInterfaceController.swift in Sources */,
 				E5A706BC1CE9185E0025D569 /* NotificationController.swift in Sources */,
 				E5A706BA1CE9185E0025D569 /* ExtensionDelegate.swift in Sources */,
 				E5A706B81CE9185E0025D569 /* InterfaceController.swift in Sources */,
+				E5A706DB1CE9846F0025D569 /* vistaFinal.swift in Sources */,
+				E5A706D11CE9370D0025D569 /* pasaValor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

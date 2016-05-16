@@ -1,16 +1,68 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="pizzaAppW_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="136" alignment="left" text="Elija - Tamaño" textAlignment="center" minimumScaleFactor="0.90000000000000002" id="ZIO-ck-IzC" colorLabel="IBBuiltInLabel-Red">
+                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <group width="1" alignment="left" id="gAP-4h-L2L">
+                            <items>
+                                <button width="102.5" height="25" alignment="left" title="Personal 8 PCS" id="Rg1-6z-d6i">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="seleccionTamañoPeronal" destination="AgC-eL-Hgc" id="z9y-Oy-T0h"/>
+                                    </connections>
+                                </button>
+                                <label width="33" height="25" alignment="left" text="L1" textAlignment="center" id="nkn-0u-yjU"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="0NY-q2-AIt">
+                            <items>
+                                <button width="102" height="25" alignment="left" title="Mediana 18 PCS" id="7nB-0M-yX1">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="seleccionTamañoMediano" destination="AgC-eL-Hgc" id="SfU-Ys-Uvr"/>
+                                    </connections>
+                                </button>
+                                <label width="33" height="25" alignment="left" text="L2" textAlignment="center" id="hn9-Sz-qfR"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="ULi-NE-Mqx">
+                            <items>
+                                <button width="103" height="25" alignment="left" title="Familiar 24 PCS" id="X5W-HM-N8V">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="seleccionTamañoFamiliar" destination="AgC-eL-Hgc" id="mDm-nS-xA7"/>
+                                    </connections>
+                                </button>
+                                <label width="33" height="25" alignment="left" text="L3" textAlignment="center" id="Z4T-2s-Buw"/>
+                            </items>
+                        </group>
+                        <button width="1" height="20" alignment="left" title="confirmacion -&gt;" id="LMV-9O-Jwo">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.1239035118" green="1" blue="0.1143667909" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="confirmacionBoton" destination="AgC-eL-Hgc" id="slC-Rs-efx"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="etiquetaTamaño_1" destination="nkn-0u-yjU" id="HhY-rV-hfB"/>
+                        <outlet property="etiquetaTamaño_2" destination="hn9-Sz-qfR" id="c1K-Pg-HCk"/>
+                        <outlet property="etiquetaTamaño_3" destination="Z4T-2s-Buw" id="Z6H-gm-Y8B"/>
+                        <outlet property="seleccionTamañoMediano" destination="7nB-0M-yX1" id="NOv-OZ-E3b"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="210" y="321"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -28,10 +80,281 @@
             </objects>
             <point key="canvasLocation" x="220" y="643"/>
         </scene>
+        <!--vistaMasa-->
+        <scene sceneID="IOk-7q-rbR">
+            <objects>
+                <controller identifier="vistaMasa" id="DaI-UQ-ndR" customClass="vistaSeleccionMasaInterfaceController" customModule="pizzaAppW_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Elija - Tipo Masa" id="9RU-CM-Dad"/>
+                        <group width="1" alignment="left" id="j2s-mb-aAd">
+                            <items>
+                                <button width="102" height="25" alignment="left" title="Delgada" id="1Wz-FU-v23">
+                                    <connections>
+                                        <action selector="seleccionMasaDelgada" destination="DaI-UQ-ndR" id="EcZ-Ln-Rtl"/>
+                                    </connections>
+                                </button>
+                                <label width="33" height="25" alignment="left" text="L1" textAlignment="center" id="U1B-cj-3iM"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="tfI-Dg-Ayr">
+                            <items>
+                                <button width="102" height="25" alignment="left" title="Crujiente" id="gRc-Ec-zIL">
+                                    <connections>
+                                        <action selector="seleccionMasaCrujiente" destination="DaI-UQ-ndR" id="8LX-sH-cRu"/>
+                                    </connections>
+                                </button>
+                                <label width="33" height="25" alignment="left" text="L2" textAlignment="center" id="FuL-KX-oUt"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="n5t-U7-fSo">
+                            <items>
+                                <button width="102" height="25" alignment="left" title="Gruesa" id="yEU-zi-xfS">
+                                    <connections>
+                                        <action selector="seleccionMasaGruesa" destination="DaI-UQ-ndR" id="DKV-Od-LvC"/>
+                                    </connections>
+                                </button>
+                                <label width="33" height="25" alignment="left" text="L3" textAlignment="center" id="YJv-hD-aHa"/>
+                            </items>
+                        </group>
+                        <button width="1" height="20" alignment="left" title="confirmacion -&gt;" id="7i2-O2-8N0">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.2202409065" green="1" blue="0.18900630039999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="confirmacionMasa" destination="DaI-UQ-ndR" id="65C-sB-kH7"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="etiquetaMasa_1" destination="U1B-cj-3iM" id="PQn-x9-n3Z"/>
+                        <outlet property="etiquetaMasa_2" destination="FuL-KX-oUt" id="u1K-Ne-mHb"/>
+                        <outlet property="etiquetaMasa_3" destination="YJv-hD-aHa" id="1nm-h8-0OQ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="473" y="321"/>
+        </scene>
+        <!--vistaQueso-->
+        <scene sceneID="h9C-De-1Mc">
+            <objects>
+                <controller identifier="vistaQueso" id="WIu-HE-SuW" customClass="vistaSeleccionQuesoInterfaceController" customModule="pizzaAppW_WatchKit_Extension">
+                    <items>
+                        <label width="136" alignment="left" text="Elija - Queso" textAlignment="center" id="i8s-lI-XUH"/>
+                        <group width="1" alignment="left" id="JIg-TB-4PT">
+                            <items>
+                                <button width="67" height="25" alignment="left" title="Mozzarela" id="YbJ-dV-hZX">
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                    <connections>
+                                        <action selector="seleccionQuesoMozzarela" destination="WIu-HE-SuW" id="Cfh-J4-jKC"/>
+                                    </connections>
+                                </button>
+                                <button width="72" height="25" alignment="left" title="Cheddar" id="JtO-oi-JaU">
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                    <connections>
+                                        <action selector="seleccionQuesoCheddar" destination="WIu-HE-SuW" id="k96-Tn-FuC"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="801-yW-GvO">
+                            <items>
+                                <button width="68" height="25" alignment="left" title="Parmesan" id="Odd-5d-9gd">
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                    <connections>
+                                        <action selector="seleccionoQuesoParmesan" destination="WIu-HE-SuW" id="rJa-M4-a6y"/>
+                                    </connections>
+                                </button>
+                                <button width="72" height="25" alignment="left" title="No Queso" id="E0d-eM-pCY">
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                    <connections>
+                                        <action selector="seleccionoNoQuiereQueso" destination="WIu-HE-SuW" id="kO9-Ra-Fej"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <label width="132.5" alignment="left" text="Label" textAlignment="center" id="JjI-3b-CVV"/>
+                        <button width="1" height="20" alignment="left" title="confirmacion -&gt;" id="mJR-kq-Ttn">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.2202409065" green="1" blue="0.18900630039999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="confirmacionQueso" destination="WIu-HE-SuW" id="KLO-Q1-w4I"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="seleccionQuesoConfirmacion" destination="JjI-3b-CVV" id="niM-LJ-Euw"/>
+                        <outlet property="seleccionQuesoMozzarela" destination="YbJ-dV-hZX" id="VOh-A3-Wkq"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="715" y="321"/>
+        </scene>
+        <!--vistaIngredientes-->
+        <scene sceneID="LOH-Fm-KC2">
+            <objects>
+                <controller identifier="vistaIngredientes" id="bYY-bc-3mP" customClass="vistaSeleccionIngredientes" customModule="pizzaAppW_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="fiF-wT-2uE">
+                            <items>
+                                <label width="96" alignment="left" text="Ingredientes " textAlignment="center" id="TAT-C8-WTB"/>
+                                <label width="32" alignment="left" text="L1" textAlignment="center" id="1Zu-Lw-vgX"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="JYN-XJ-l3h">
+                            <items>
+                                <button width="66" height="20" alignment="left" title="Jamon" id="6cV-Kh-atA">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                    <connections>
+                                        <action selector="seleccionAceituna" destination="bYY-bc-3mP" id="IUJ-CJ-WWc"/>
+                                    </connections>
+                                </button>
+                                <button width="66" height="20" alignment="left" title="Pepperoni" id="Uex-8y-iWt">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                    <connections>
+                                        <action selector="seleccionIngre_Pepperoni" destination="bYY-bc-3mP" id="Ykk-ee-Hyg"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="ktc-SZ-8iW">
+                            <items>
+                                <button width="66" height="20" alignment="left" title="Pavo" id="hrV-O0-hAh">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                    <connections>
+                                        <action selector="seleccionPavo" destination="bYY-bc-3mP" id="ahY-sw-0o0"/>
+                                    </connections>
+                                </button>
+                                <button width="66" height="20" alignment="left" title="Salchicha" id="mc9-gx-3bU">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                    <connections>
+                                        <action selector="seleccionSalchicha" destination="bYY-bc-3mP" id="5CJ-ZI-Awt"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="bCB-Ha-hWP">
+                            <items>
+                                <button width="66" height="20" alignment="left" title="Aceituna" id="OcC-F4-9bM">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                    <connections>
+                                        <action selector="seleccionIngre_Uno" destination="bYY-bc-3mP" id="bps-QN-muH"/>
+                                    </connections>
+                                </button>
+                                <button width="66" height="20" alignment="left" title="Cebolla" id="ZaS-D4-Vba">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                    <connections>
+                                        <action selector="seleccionCebolla" destination="bYY-bc-3mP" id="ZV0-6H-f4E"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="bI5-4b-vDn">
+                            <items>
+                                <button width="66" height="20" alignment="left" title="Pimiento" id="MkN-IP-qIu">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                    <connections>
+                                        <action selector="seleccionPimiento" destination="bYY-bc-3mP" id="evD-gB-Sv5"/>
+                                    </connections>
+                                </button>
+                                <button width="66" height="20" alignment="left" title="Piña" id="rFX-LL-oIF">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                    <connections>
+                                        <action selector="seleccionPiña" destination="bYY-bc-3mP" id="uZv-s2-E0Y"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <button width="1" height="20" alignment="left" title="confirmacion -&gt;" id="aCp-5e-Kee">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.2202409065" green="1" blue="0.18900630039999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="confirmacionIngredientes" destination="bYY-bc-3mP" id="32s-BE-fdz"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="etiquetaContadorIngredientes" destination="1Zu-Lw-vgX" id="IuW-KP-95p"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="950" y="321"/>
+        </scene>
+        <!--vistaConfirmacion-->
+        <scene sceneID="21k-xI-nD9">
+            <objects>
+                <controller identifier="vistaConfirmacion" id="Gyl-xU-fU2" customClass="vistaConfirmacion" customModule="pizzaAppW_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="pRD-1p-HJp">
+                            <items>
+                                <button width="65" height="29.5" alignment="left" title="&lt;- Error" id="MIy-rI-BRO">
+                                    <color key="titleColor" red="1" green="0.045863607229999999" blue="0.048270186780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="15"/>
+                                    <connections>
+                                        <segue destination="AgC-eL-Hgc" kind="push" id="jTh-iZ-ktH"/>
+                                    </connections>
+                                </button>
+                                <button width="67" height="29.5" alignment="left" title="OK -&gt;" id="57b-eT-AUU">
+                                    <color key="titleColor" red="0.2202409065" green="1" blue="0.18900630039999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="15"/>
+                                    <connections>
+                                        <action selector="actionSalir" destination="Gyl-xU-fU2" id="0UQ-NB-dUF"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="gIe-uN-4Qs">
+                            <items>
+                                <label width="136" alignment="left" text="Tamaño" textAlignment="center" id="aor-9s-8Gd"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="h0a-z3-XIK">
+                            <items>
+                                <label width="68" alignment="left" text="Masa" textAlignment="center" id="sI0-fi-kpm"/>
+                                <label width="66" alignment="left" text="Queso" textAlignment="center" id="Rgx-IV-eEZ"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="aYi-D2-dN6">
+                            <items>
+                                <label width="66" alignment="left" text="ingre_1" textAlignment="center" id="Y3F-yA-jv3"/>
+                                <label width="68" alignment="left" text="ingre_2" textAlignment="center" id="2zj-py-Z8N"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="F4T-Ky-NxH">
+                            <items>
+                                <label width="66" alignment="left" text="ingre_3" textAlignment="center" id="uQs-0Z-u6c"/>
+                                <label width="68" alignment="left" text="ingre_4" textAlignment="center" id="WDc-CI-V8S"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="b0P-A0-kqZ">
+                            <items>
+                                <label width="136" alignment="left" text="ingre_5" textAlignment="center" id="t0K-NG-ZGe"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="etiquetaIngre_1" destination="Y3F-yA-jv3" id="Y6Z-gR-w9j"/>
+                        <outlet property="etiquetaIngre_2" destination="2zj-py-Z8N" id="QxX-9E-may"/>
+                        <outlet property="etiquetaIngre_3" destination="uQs-0Z-u6c" id="UWb-c0-iTO"/>
+                        <outlet property="etiquetaIngre_4" destination="WDc-CI-V8S" id="aAi-mx-qRl"/>
+                        <outlet property="etiquetaIngre_5" destination="t0K-NG-ZGe" id="ndY-GX-aNS"/>
+                        <outlet property="etiquetaMasa" destination="sI0-fi-kpm" id="8Y6-KT-Fa3"/>
+                        <outlet property="etiquetaQueso" destination="Rgx-IV-eEZ" id="FMK-aL-0ug"/>
+                        <outlet property="etiquetaTamaño" destination="aor-9s-8Gd" id="pk3-5D-eu2"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1192" y="315"/>
+        </scene>
+        <!--vistaGracias-->
+        <scene sceneID="Hb7-xy-G1s">
+            <objects>
+                <controller identifier="vistaGracias" id="yDB-cs-zB5" customClass="vistaFinal" customModule="pizzaAppW_WatchKit_Extension"/>
+            </objects>
+            <point key="canvasLocation" x="1481" y="315"/>
+        </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="pizzaAppW_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>

@@ -11,11 +11,70 @@ import Foundation
 
 
 class vistaConfirmacion: WKInterfaceController {
+    
+    
+    @IBOutlet var etiquetaTamaño: WKInterfaceLabel!
+    @IBOutlet var etiquetaMasa: WKInterfaceLabel!
+    @IBOutlet var etiquetaQueso: WKInterfaceLabel!
+    @IBOutlet var etiquetaIngre_1: WKInterfaceLabel!
+    @IBOutlet var etiquetaIngre_2: WKInterfaceLabel!
+    @IBOutlet var etiquetaIngre_3: WKInterfaceLabel!
+    @IBOutlet var etiquetaIngre_4: WKInterfaceLabel!
+    @IBOutlet var etiquetaIngre_5: WKInterfaceLabel!
 
+    var seleccionQuesoDescripcion : String = ""
+    var seleccionQueso : Int = 0
+    
+    var seleccionMasa : Int = 0
+    var seleccionMasaDescripcion : String = ""
+    
+    
+    var seleccionTamañoDescripcion : String = ""
+    var seleccionTamaño : Int = 0
+    
+    var seleccionIngrediente_Uno : Int = 0
+    var seleccionIngrediente_Descripcion_Uno : String = ""
+    
+    var seleccionIngrediente_Dos : Int = 0
+    var seleccionIngrediente_Descripcion_Dos : String = ""
+    
+    var seleccionIngrediente_Tres : Int = 0
+    var seleccionIngrediente_Descripcion_Tres : String = ""
+    
+    var seleccionIngrediente_Cuatro : Int = 0
+    var seleccionIngrediente_Descripcion_Cuatro : String = ""
+    
+    var seleccionIngrediente_Cinco : Int = 0
+    var seleccionIngrediente_Descripcion_Cinco : String = ""
+
+    
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+        
+        let almacenaDatosVistaIngredientes = context as! pasaValor
+        
+        seleccionTamañoDescripcion = almacenaDatosVistaIngredientes.descripcion
+        seleccionTamaño = almacenaDatosVistaIngredientes.valor
+        
+        seleccionMasaDescripcion = almacenaDatosVistaIngredientes.descripcionMasa
+        seleccionMasa = almacenaDatosVistaIngredientes.valorMasa
+        
+        seleccionQuesoDescripcion = almacenaDatosVistaIngredientes.descripcionQueso
+        seleccionQueso = almacenaDatosVistaIngredientes.valorQueso
+        
+       
+        seleccionIngrediente_Descripcion_Uno = almacenaDatosVistaIngredientes.ingredienteDescripcion_Uno
+        
+        
+
+        
+        self.etiquetaTamaño.setText(String(seleccionTamañoDescripcion))
+        self.etiquetaMasa.setText(String(seleccionMasaDescripcion))
+        self.etiquetaQueso.setText(String(seleccionQuesoDescripcion))
+        self.etiquetaIngre_1.setText(String(seleccionIngrediente_Uno))
     }
 
     override func willActivate() {
@@ -26,6 +85,12 @@ class vistaConfirmacion: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+    }
+    
+    
+    @IBAction func actionSalir() {
+        
+        //
     }
 
 }
