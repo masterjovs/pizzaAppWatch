@@ -32,6 +32,17 @@ class vistaSeleccionMasaInterfaceController: WKInterfaceController {
     var seleccionIngrediente_Uno : Int = 0
     var seleccionIngrediente_Descripcion_Uno : String = ""
     
+    var seleccionIngrediente_Dos : Int = 0
+    var seleccionIngrediente_Descripcion_Dos : String = ""
+    
+    var seleccionIngrediente_Tres : Int = 0
+    var seleccionIngrediente_Descripcion_Tres : String = ""
+    
+    var seleccionIngrediente_Cuatro : Int = 0
+    var seleccionIngrediente_Descripcion_Cuatro : String = ""
+    
+    var seleccionIngrediente_Cinco : Int = 0
+    var seleccionIngrediente_Descripcion_Cinco : String = ""
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -123,7 +134,14 @@ class vistaSeleccionMasaInterfaceController: WKInterfaceController {
             print("De la vista futura Ingrediente_Uno: \(seleccionIngrediente_Descripcion_Uno)")
             print("De la vista futura Ingrediente_Uno: \(seleccionIngrediente_Uno)")
             
-            let valorContexto = pasaValor(d: seleccionTamañoDescripcion, v: seleccionTamaño, dMasa: seleccionMasaDescripcion, vMasa : seleccionMasa, dQueso : seleccionQuesoDescripcion, vQueso : seleccionQueso, dIngrediente_Uno : seleccionIngrediente_Descripcion_Uno, vIngrediente_Uno: seleccionIngrediente_Uno)
+            print("De la vista futura Ingrediente_Uno: \(seleccionIngrediente_Descripcion_Dos)")
+            print("De la vista futura Ingrediente_Uno: \(seleccionIngrediente_Dos)")
+            
+            print("De la vista futura Ingrediente_Uno: \(seleccionIngrediente_Descripcion_Tres)")
+            print("De la vista futura Ingrediente_Uno: \(seleccionIngrediente_Tres)")
+            
+            let valorContexto = pasaValor(d: seleccionTamañoDescripcion, v: seleccionTamaño, dMasa: seleccionMasaDescripcion, vMasa : seleccionMasa, dQueso : seleccionQuesoDescripcion, vQueso : seleccionQueso, dIngrediente_Uno : seleccionIngrediente_Descripcion_Uno, vIngrediente_Uno: seleccionIngrediente_Uno, dIngrediente_Dos: seleccionIngrediente_Descripcion_Dos, vIngrediente_Dos: seleccionIngrediente_Dos, dIngrediente_Tres: seleccionIngrediente_Descripcion_Tres, vIngrediente_Tres: seleccionIngrediente_Tres, dIngrediente_Cuatro: seleccionIngrediente_Descripcion_Cuatro, vIngrediente_Cuatro: seleccionIngrediente_Cuatro, dIngrediente_Cinco: seleccionIngrediente_Descripcion_Cinco, vIngrediente_Cinco: seleccionIngrediente_Cinco)
+            
             pushControllerWithName("vistaQueso", context: valorContexto)
             
             print("Fin segunda vista")

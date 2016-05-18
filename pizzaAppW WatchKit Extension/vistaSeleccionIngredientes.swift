@@ -76,9 +76,13 @@ class vistaSeleccionIngredientes: WKInterfaceController {
     
     @IBAction func seleccionIngre_Jamon() {
         
-        contadorIngredientes = contadorIngredientes + 1
-        if contadorIngredientes <= 6 {
+     
+        
+        if contadorIngredientes < 6 {
             self.etiquetaContadorIngredientes.setText(String(contadorIngredientes))
+            
+            contadorIngredientes = contadorIngredientes + 1
+            print("\(contadorIngredientes)")
             
             if contadorIngredientes == 1{
                 seleccionIngrediente_Descripcion_Uno = "JAMON"
@@ -100,23 +104,23 @@ class vistaSeleccionIngredientes: WKInterfaceController {
                 seleccionIngrediente_Descripcion_Cinco = "JAMON"
                 seleccionIngrediente_Cinco = 5
                 self.etiquetaContadorIngredientes.setText(String(contadorIngredientes))
-            }else if contadorIngredientes > 5{
-                print("No mas ingredientes")
                 self.etiquetaContadorIngredientes.setText("5 OK")
-
+                contadorIngredientes = contadorIngredientes + 1
+                print("completo los 5 ingredientes")
+                print("\(contadorIngredientes)")
+                }
             }
-        }else if contadorIngredientes == 5{
-            self.etiquetaContadorIngredientes.setText("5 OK")
-        }
         
         
-    }
+    } //fin botton
     
     @IBAction func seleccionIngre_Pepperoni() {
-        contadorIngredientes = contadorIngredientes + 1
-        
-        if contadorIngredientes <= 6 {
+   
+        if contadorIngredientes < 6 {
+            self.etiquetaContadorIngredientes.setText(String(contadorIngredientes))
             
+            contadorIngredientes = contadorIngredientes + 1
+            print("\(contadorIngredientes)")
             
             if contadorIngredientes == 1{
                 seleccionIngrediente_Descripcion_Uno = "PEPPERONI"
@@ -138,26 +142,23 @@ class vistaSeleccionIngredientes: WKInterfaceController {
                 seleccionIngrediente_Descripcion_Cinco = "PEPPERONI"
                 seleccionIngrediente_Cinco = 5
                 self.etiquetaContadorIngredientes.setText(String(contadorIngredientes))
-            }else if contadorIngredientes > 5{
-                print("No mas ingredientes")
                 self.etiquetaContadorIngredientes.setText("5 OK")
-
+                contadorIngredientes = contadorIngredientes + 1
+                print("completo los 5 ingredientes")
+                print("\(contadorIngredientes)")
             }
-        }else if contadorIngredientes == 5{
-            self.etiquetaContadorIngredientes.setText("5 OK")
         }
-        
-
-        
     }
     
     
     @IBAction func seleccionPavo() {
+    
         
-        contadorIngredientes = contadorIngredientes + 1
-        
-        if contadorIngredientes <= 6 {
+        if contadorIngredientes < 6 {
+            self.etiquetaContadorIngredientes.setText(String(contadorIngredientes))
             
+            contadorIngredientes = contadorIngredientes + 1
+            print("\(contadorIngredientes)")
             
             if contadorIngredientes == 1{
                 seleccionIngrediente_Descripcion_Uno = "PAVO"
@@ -179,28 +180,31 @@ class vistaSeleccionIngredientes: WKInterfaceController {
                 seleccionIngrediente_Descripcion_Cinco = "PAVO"
                 seleccionIngrediente_Cinco = 5
                 self.etiquetaContadorIngredientes.setText(String(contadorIngredientes))
-            }else if contadorIngredientes > 5{
-                print("No mas ingredientes")
                 self.etiquetaContadorIngredientes.setText("5 OK")
-                
+                contadorIngredientes = contadorIngredientes + 1
+                print("completo los 5 ingredientes")
+                print("\(contadorIngredientes)")
             }
-        }else if contadorIngredientes == 5{
-            self.etiquetaContadorIngredientes.setText("5 OK")
         }
+
     }
+
     
+
     @IBAction func seleccionSalchicha() {
-        contadorIngredientes = contadorIngredientes + 1
-        
-        if contadorIngredientes <= 6 {
+       
+        if contadorIngredientes < 6 {
+            self.etiquetaContadorIngredientes.setText(String(contadorIngredientes))
             
+            contadorIngredientes = contadorIngredientes + 1
+            print("\(contadorIngredientes)")
             
             if contadorIngredientes == 1{
                 seleccionIngrediente_Descripcion_Uno = "SALCHICHA"
                 seleccionIngrediente_Uno = 1
                 self.etiquetaContadorIngredientes.setText(String(contadorIngredientes))
             }else if contadorIngredientes == 2{
-                seleccionIngrediente_Descripcion_Dos = "SALCHINA"
+                seleccionIngrediente_Descripcion_Dos = "SALCHICHA"
                 seleccionIngrediente_Dos = 2
                 self.etiquetaContadorIngredientes.setText(String(contadorIngredientes))
             }else if contadorIngredientes == 3{
@@ -215,22 +219,22 @@ class vistaSeleccionIngredientes: WKInterfaceController {
                 seleccionIngrediente_Descripcion_Cinco = "SALCHICHA"
                 seleccionIngrediente_Cinco = 5
                 self.etiquetaContadorIngredientes.setText(String(contadorIngredientes))
-            }else if contadorIngredientes > 5{
-                print("No mas ingredientes")
                 self.etiquetaContadorIngredientes.setText("5 OK")
-                
+                contadorIngredientes = contadorIngredientes + 1
+                print("completo los 5 ingredientes")
+                print("\(contadorIngredientes)")
             }
-        }else if contadorIngredientes == 5{
-            self.etiquetaContadorIngredientes.setText("5 OK")
         }
-        
+
     }
     
     @IBAction func seleccionAceituna() {
-        contadorIngredientes = contadorIngredientes + 1
-        
-        if contadorIngredientes <= 6 {
+    
+        if contadorIngredientes < 6 {
+            self.etiquetaContadorIngredientes.setText(String(contadorIngredientes))
             
+            contadorIngredientes = contadorIngredientes + 1
+            print("\(contadorIngredientes)")
             
             if contadorIngredientes == 1{
                 seleccionIngrediente_Descripcion_Uno = "ACEITUNA"
@@ -252,21 +256,24 @@ class vistaSeleccionIngredientes: WKInterfaceController {
                 seleccionIngrediente_Descripcion_Cinco = "ACEITUNA"
                 seleccionIngrediente_Cinco = 5
                 self.etiquetaContadorIngredientes.setText(String(contadorIngredientes))
-            }else if contadorIngredientes > 5{
-                print("No mas ingredientes")
                 self.etiquetaContadorIngredientes.setText("5 OK")
-                
+                contadorIngredientes = contadorIngredientes + 1
+                print("completo los 5 ingredientes")
+                print("\(contadorIngredientes)")
             }
-        }else if contadorIngredientes == 5{
-            self.etiquetaContadorIngredientes.setText("5 OK")
         }
+
+
     }
     
     @IBAction func seleccionCebolla() {
-        contadorIngredientes = contadorIngredientes + 1
         
-        if contadorIngredientes <= 6 {
+
+        if contadorIngredientes < 6 {
+            self.etiquetaContadorIngredientes.setText(String(contadorIngredientes))
             
+            contadorIngredientes = contadorIngredientes + 1
+            print("\(contadorIngredientes)")
             
             if contadorIngredientes == 1{
                 seleccionIngrediente_Descripcion_Uno = "CEBOLLA"
@@ -288,21 +295,23 @@ class vistaSeleccionIngredientes: WKInterfaceController {
                 seleccionIngrediente_Descripcion_Cinco = "CEBOLLA"
                 seleccionIngrediente_Cinco = 5
                 self.etiquetaContadorIngredientes.setText(String(contadorIngredientes))
-            }else if contadorIngredientes > 5{
-                print("No mas ingredientes")
                 self.etiquetaContadorIngredientes.setText("5 OK")
-                
+                contadorIngredientes = contadorIngredientes + 1
+                print("completo los 5 ingredientes")
+                print("\(contadorIngredientes)")
             }
-        }else if contadorIngredientes == 5{
-            self.etiquetaContadorIngredientes.setText("5 OK")
         }
+
+        
     }
     
     @IBAction func seleccionPimiento() {
-        contadorIngredientes = contadorIngredientes + 1
-        
-        if contadorIngredientes <= 6 {
+     
+        if contadorIngredientes < 6 {
+            self.etiquetaContadorIngredientes.setText(String(contadorIngredientes))
             
+            contadorIngredientes = contadorIngredientes + 1
+            print("\(contadorIngredientes)")
             
             if contadorIngredientes == 1{
                 seleccionIngrediente_Descripcion_Uno = "PIMIENTO"
@@ -324,21 +333,23 @@ class vistaSeleccionIngredientes: WKInterfaceController {
                 seleccionIngrediente_Descripcion_Cinco = "PIMIENTO"
                 seleccionIngrediente_Cinco = 5
                 self.etiquetaContadorIngredientes.setText(String(contadorIngredientes))
-            }else if contadorIngredientes > 5{
-                print("No mas ingredientes")
                 self.etiquetaContadorIngredientes.setText("5 OK")
-                
+                contadorIngredientes = contadorIngredientes + 1
+                print("completo los 5 ingredientes")
+                print("\(contadorIngredientes)")
             }
-        }else if contadorIngredientes == 5{
-            self.etiquetaContadorIngredientes.setText("5 OK")
         }
+
     }
     
     @IBAction func seleccionPiña() {
-        contadorIngredientes = contadorIngredientes + 1
+  
         
-        if contadorIngredientes <= 6 {
+        if contadorIngredientes < 6 {
+            self.etiquetaContadorIngredientes.setText(String(contadorIngredientes))
             
+            contadorIngredientes = contadorIngredientes + 1
+            print("\(contadorIngredientes)")
             
             if contadorIngredientes == 1{
                 seleccionIngrediente_Descripcion_Uno = "PIÑA"
@@ -360,53 +371,67 @@ class vistaSeleccionIngredientes: WKInterfaceController {
                 seleccionIngrediente_Descripcion_Cinco = "PIÑA"
                 seleccionIngrediente_Cinco = 5
                 self.etiquetaContadorIngredientes.setText(String(contadorIngredientes))
-            }else if contadorIngredientes > 5{
-                print("No mas ingredientes")
                 self.etiquetaContadorIngredientes.setText("5 OK")
-                
+                contadorIngredientes = contadorIngredientes + 1
+                print("completo los 5 ingredientes")
+                print("\(contadorIngredientes)")
             }
-        }else if contadorIngredientes == 5{
-            self.etiquetaContadorIngredientes.setText("5 OK")
         }
+
     }
 
     @IBAction func confirmacionIngredientes() {
         
         
-       
+        if contadorIngredientes == 6{
+            print("orden completa CHAO")
             
-            let valorContexto = pasaValor(d: seleccionTamañoDescripcion, v: seleccionTamaño, dMasa: seleccionMasaDescripcion, vMasa : seleccionMasa, dQueso : seleccionQuesoDescripcion, vQueso : seleccionQueso, dIngrediente_Uno : seleccionIngrediente_Descripcion_Uno, vIngrediente_Uno: seleccionIngrediente_Uno)
-        
+            print("Todos los ingredientes se seleccionaron")
+            
+            let valorContexto = pasaValor(d: seleccionTamañoDescripcion, v: seleccionTamaño, dMasa: seleccionMasaDescripcion, vMasa : seleccionMasa, dQueso : seleccionQuesoDescripcion, vQueso : seleccionQueso, dIngrediente_Uno : seleccionIngrediente_Descripcion_Uno, vIngrediente_Uno: seleccionIngrediente_Uno, dIngrediente_Dos: seleccionIngrediente_Descripcion_Dos, vIngrediente_Dos: seleccionIngrediente_Dos, dIngrediente_Tres: seleccionIngrediente_Descripcion_Tres, vIngrediente_Tres: seleccionIngrediente_Tres, dIngrediente_Cuatro: seleccionIngrediente_Descripcion_Cuatro, vIngrediente_Cuatro: seleccionIngrediente_Cuatro, dIngrediente_Cinco: seleccionIngrediente_Descripcion_Cinco, vIngrediente_Cinco: seleccionIngrediente_Cinco)
+            
             pushControllerWithName("vistaConfirmacion", context: valorContexto)
+            
+            
+            
+            print("De la vista pasada: \(seleccionTamañoDescripcion)")
+            print("De la vista pasada: \(seleccionTamaño)")
+            
+            print("De la vista pasada: \(seleccionMasaDescripcion)")
+            print("De la vista pasada: \(seleccionMasa)")
+            
+            
+            print("De la vista actual: \(seleccionQuesoDescripcion)")
+            print("De la vista actual: \(seleccionQueso)")
+            
+            print("De la vista futura Ingrediente_Uno: \(seleccionIngrediente_Descripcion_Uno)")
+            print("De la vista futura Ingrediente_Uno: \(seleccionIngrediente_Uno)")
+            
+            print("De la vista futura Ingrediente_Dos: \(seleccionIngrediente_Descripcion_Dos)")
+            print("De la vista futura Ingrediente_Dos: \(seleccionIngrediente_Dos)")
+            
+            print("De la vista futura Ingrediente_Tres: \(seleccionIngrediente_Descripcion_Tres)")
+            print("De la vista futura Ingrediente_Tres: \(seleccionIngrediente_Tres)")
+            
+            print("De la vista futura Ingrediente_Cuatro: \(seleccionIngrediente_Descripcion_Cuatro)")
+            print("De la vista futura Ingrediente_Cuatro: \(seleccionIngrediente_Cuatro)")
+            
+            print("De la vista futura Ingrediente_Cinco: \(seleccionIngrediente_Descripcion_Cinco)")
+            print("De la vista futura Ingrediente_Cinco: \(seleccionIngrediente_Cinco)")
+            
+            
+            print("fin cuarta vista")
+            
+            
+        }else {
+            print("No esta completa la orden FUCK")
+        }
+        
+        /*
         
         
+       
+        */
         
-        print("De la vista pasada: \(seleccionTamañoDescripcion)")
-        print("De la vista pasada: \(seleccionTamaño)")
-        
-        print("De la vista pasada: \(seleccionMasaDescripcion)")
-        print("De la vista pasada: \(seleccionMasa)")
-        
-        
-        print("De la vista actual: \(seleccionQuesoDescripcion)")
-        print("De la vista actual: \(seleccionQueso)")
-        
-        print("De la vista futura Ingrediente_Uno: \(seleccionIngrediente_Descripcion_Uno)")
-        print("De la vista futura Ingrediente_Uno: \(seleccionIngrediente_Uno)")
-        
-        print("De la vista futura Ingrediente_Dos: \(seleccionIngrediente_Descripcion_Dos)")
-        print("De la vista futura Ingrediente_Dos: \(seleccionIngrediente_Dos)")
-        
-        print("De la vista futura Ingrediente_Tres: \(seleccionIngrediente_Descripcion_Tres)")
-        print("De la vista futura Ingrediente_Tres: \(seleccionIngrediente_Tres)")
-        
-        print("De la vista futura Ingrediente_Cuatro: \(seleccionIngrediente_Descripcion_Cuatro)")
-        print("De la vista futura Ingrediente_Cuatro: \(seleccionIngrediente_Cuatro)")
-        
-        print("De la vista futura Ingrediente_Cinco: \(seleccionIngrediente_Descripcion_Cinco)")
-        print("De la vista futura Ingrediente_Cinco: \(seleccionIngrediente_Cinco)")
-        
-        
-        print("fin cuarta vista")
     }
 }

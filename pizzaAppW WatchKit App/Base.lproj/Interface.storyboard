@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
@@ -204,7 +204,7 @@
                                 <button width="66" height="20" alignment="left" title="Jamon" id="6cV-Kh-atA">
                                     <fontDescription key="font" type="system" pointSize="10"/>
                                     <connections>
-                                        <action selector="seleccionAceituna" destination="bYY-bc-3mP" id="IUJ-CJ-WWc"/>
+                                        <action selector="seleccionIngre_Jamon" destination="bYY-bc-3mP" id="JTx-yp-v6m"/>
                                     </connections>
                                 </button>
                                 <button width="66" height="20" alignment="left" title="Pepperoni" id="Uex-8y-iWt">
@@ -236,7 +236,7 @@
                                 <button width="66" height="20" alignment="left" title="Aceituna" id="OcC-F4-9bM">
                                     <fontDescription key="font" type="system" pointSize="10"/>
                                     <connections>
-                                        <action selector="seleccionIngre_Uno" destination="bYY-bc-3mP" id="bps-QN-muH"/>
+                                        <action selector="seleccionAceituna" destination="bYY-bc-3mP" id="PsT-p7-THP"/>
                                     </connections>
                                 </button>
                                 <button width="66" height="20" alignment="left" title="Cebolla" id="ZaS-D4-Vba">
@@ -285,48 +285,101 @@
                     <items>
                         <group width="1" alignment="left" id="pRD-1p-HJp">
                             <items>
-                                <button width="65" height="29.5" alignment="left" title="&lt;- Error" id="MIy-rI-BRO">
+                                <button width="65" height="20" alignment="left" title="&lt;- Error" id="MIy-rI-BRO">
                                     <color key="titleColor" red="1" green="0.045863607229999999" blue="0.048270186780000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="font" type="system" pointSize="15"/>
+                                    <fontDescription key="font" type="system" pointSize="14"/>
                                     <connections>
                                         <segue destination="AgC-eL-Hgc" kind="push" id="jTh-iZ-ktH"/>
                                     </connections>
                                 </button>
-                                <button width="67" height="29.5" alignment="left" title="OK -&gt;" id="57b-eT-AUU">
+                                <button width="67" height="20" alignment="left" title="OK -&gt;" id="57b-eT-AUU">
                                     <color key="titleColor" red="0.2202409065" green="1" blue="0.18900630039999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="font" type="system" pointSize="15"/>
+                                    <fontDescription key="font" type="system" pointSize="14"/>
                                     <connections>
                                         <action selector="actionSalir" destination="Gyl-xU-fU2" id="0UQ-NB-dUF"/>
+                                        <segue destination="yDB-cs-zB5" kind="push" id="GrJ-MW-HnZ"/>
                                     </connections>
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="gIe-uN-4Qs">
+                        <group width="1" alignment="left" id="nqx-nN-4j4">
                             <items>
-                                <label width="136" alignment="left" text="Tamaño" textAlignment="center" id="aor-9s-8Gd"/>
+                                <label width="67" alignment="left" text="Tamaño:" id="1uO-ge-hhJ">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                                <label width="67" alignment="left" text="Tamaño" textAlignment="center" id="aor-9s-8Gd">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
                             </items>
                         </group>
                         <group width="1" alignment="left" id="h0a-z3-XIK">
                             <items>
-                                <label width="68" alignment="left" text="Masa" textAlignment="center" id="sI0-fi-kpm"/>
-                                <label width="66" alignment="left" text="Queso" textAlignment="center" id="Rgx-IV-eEZ"/>
+                                <label width="67" alignment="left" text="Tipo masa:" id="eUL-8e-QHV">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                                <label width="68" alignment="left" text="Masa" textAlignment="center" id="sI0-fi-kpm">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="zyu-Eg-Mzd">
+                            <items>
+                                <label width="67" alignment="left" text="Tipo queso:" id="sIU-eA-xGT">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                                <label width="66" alignment="left" text="Queso" textAlignment="center" id="Rgx-IV-eEZ">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
                             </items>
                         </group>
                         <group width="1" alignment="left" id="aYi-D2-dN6">
                             <items>
-                                <label width="66" alignment="left" text="ingre_1" textAlignment="center" id="Y3F-yA-jv3"/>
-                                <label width="68" alignment="left" text="ingre_2" textAlignment="center" id="2zj-py-Z8N"/>
+                                <label width="67" alignment="left" text="Ingrediente:" id="kUf-vT-FaT">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                                <label width="66" alignment="left" text="ingre_1" textAlignment="center" id="Y3F-yA-jv3">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="Z6l-NW-gJ0">
+                            <items>
+                                <label width="67" alignment="left" text="Ingrediente:" id="J7R-XD-q6v">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                                <label width="68" alignment="left" text="ingre_2" textAlignment="center" id="2zj-py-Z8N">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="tMl-Ry-bTf">
+                            <items>
+                                <label width="67" alignment="left" text="Ingrediente:" id="0Qh-cr-wLc">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                                <label width="66" alignment="left" text="ingre_3" textAlignment="center" id="uQs-0Z-u6c">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
                             </items>
                         </group>
                         <group width="1" alignment="left" id="F4T-Ky-NxH">
                             <items>
-                                <label width="66" alignment="left" text="ingre_3" textAlignment="center" id="uQs-0Z-u6c"/>
-                                <label width="68" alignment="left" text="ingre_4" textAlignment="center" id="WDc-CI-V8S"/>
+                                <label width="67" alignment="left" text="Ingrediente:" id="uUz-Sq-F3l">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                                <label width="68" alignment="left" text="ingre_4" textAlignment="center" id="WDc-CI-V8S">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
                             </items>
                         </group>
                         <group width="1" alignment="left" id="b0P-A0-kqZ">
                             <items>
-                                <label width="136" alignment="left" text="ingre_5" textAlignment="center" id="t0K-NG-ZGe"/>
+                                <label width="67" alignment="left" text="Ingrediente:" id="Ga3-h1-8WY">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                                <label width="62" alignment="left" text="ingre_5" textAlignment="center" id="t0K-NG-ZGe">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
                             </items>
                         </group>
                     </items>
@@ -342,12 +395,17 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1192" y="315"/>
+            <point key="canvasLocation" x="1192" y="314.5"/>
         </scene>
         <!--vistaGracias-->
         <scene sceneID="Hb7-xy-G1s">
             <objects>
-                <controller identifier="vistaGracias" id="yDB-cs-zB5" customClass="vistaFinal" customModule="pizzaAppW_WatchKit_Extension"/>
+                <controller identifier="vistaGracias" id="yDB-cs-zB5" customClass="vistaFinal" customModule="pizzaAppW_WatchKit_Extension">
+                    <items>
+                        <label width="136" alignment="left" text="Su Pizza estara en 10 minutos" textAlignment="center" numberOfLines="2" id="zcr-nD-7Qh"/>
+                        <imageView height="104" alignment="left" image="256x256_gruesa.png" id="xdS-WX-tfx"/>
+                    </items>
+                </controller>
             </objects>
             <point key="canvasLocation" x="1481" y="315"/>
         </scene>

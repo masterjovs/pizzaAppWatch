@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E52C202C1CEC2F880033C14D /* 256x256_gruesa.png in Resources */ = {isa = PBXBuildFile; fileRef = E52C202B1CEC2F880033C14D /* 256x256_gruesa.png */; };
 		E5A706931CE9185E0025D569 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A706921CE9185E0025D569 /* AppDelegate.swift */; };
 		E5A706951CE9185E0025D569 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A706941CE9185E0025D569 /* ViewController.swift */; };
 		E5A706981CE9185E0025D569 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5A706961CE9185E0025D569 /* Main.storyboard */; };
@@ -71,6 +72,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E52C202B1CEC2F880033C14D /* 256x256_gruesa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 256x256_gruesa.png; path = imagenes/256x256_gruesa.png; sourceTree = SOURCE_ROOT; };
 		E5A7068F1CE9185D0025D569 /* pizzaAppW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pizzaAppW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A706921CE9185E0025D569 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5A706941CE9185E0025D569 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E52C202A1CEC2F5C0033C14D /* imagenes */ = {
+			isa = PBXGroup;
+			children = (
+				E52C202B1CEC2F880033C14D /* 256x256_gruesa.png */,
+			);
+			name = imagenes;
+			sourceTree = "<group>";
+		};
 		E5A706861CE9185D0025D569 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +161,7 @@
 		E5A706A51CE9185E0025D569 /* pizzaAppW WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				E52C202A1CEC2F5C0033C14D /* imagenes */,
 				E5A706A61CE9185E0025D569 /* Interface.storyboard */,
 				E5A706A91CE9185E0025D569 /* Assets.xcassets */,
 				E5A706AB1CE9185E0025D569 /* Info.plist */,
@@ -301,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5A706AA1CE9185E0025D569 /* Assets.xcassets in Resources */,
+				E52C202C1CEC2F880033C14D /* 256x256_gruesa.png in Resources */,
 				E5A706A81CE9185E0025D569 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,6 +582,7 @@
 				E5A706C41CE9185E0025D569 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5A706C61CE9185E0025D569 /* Build configuration list for PBXNativeTarget "pizzaAppW WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -578,6 +591,7 @@
 				E5A706C81CE9185E0025D569 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5A706CA1CE9185E0025D569 /* Build configuration list for PBXNativeTarget "pizzaAppW" */ = {
 			isa = XCConfigurationList;
@@ -586,6 +600,7 @@
 				E5A706CC1CE9185E0025D569 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

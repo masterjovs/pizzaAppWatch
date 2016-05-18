@@ -67,14 +67,29 @@ class vistaConfirmacion: WKInterfaceController {
         
        
         seleccionIngrediente_Descripcion_Uno = almacenaDatosVistaIngredientes.ingredienteDescripcion_Uno
+        seleccionIngrediente_Uno = almacenaDatosVistaIngredientes.ingredienteValor_Uno
         
-        
+        seleccionIngrediente_Descripcion_Dos = almacenaDatosVistaIngredientes.ingredienteDescripcion_Dos
+        seleccionIngrediente_Dos = almacenaDatosVistaIngredientes.ingredienteValor_Dos
 
+        seleccionIngrediente_Descripcion_Tres = almacenaDatosVistaIngredientes.ingredienteDescripcion_Tres
+        seleccionIngrediente_Tres = almacenaDatosVistaIngredientes.ingredienteValor_Tres
+        
+        seleccionIngrediente_Descripcion_Cuatro = almacenaDatosVistaIngredientes.ingredienteDescripcion_Cuatro
+        seleccionIngrediente_Cuatro = almacenaDatosVistaIngredientes.ingredienteValor_Cuatro
+        
+        seleccionIngrediente_Descripcion_Cinco = almacenaDatosVistaIngredientes.ingredienteDescripcion_Cinco
+        seleccionIngrediente_Cinco = almacenaDatosVistaIngredientes.ingredienteValor_Cinco
         
         self.etiquetaTamaño.setText(String(seleccionTamañoDescripcion))
         self.etiquetaMasa.setText(String(seleccionMasaDescripcion))
         self.etiquetaQueso.setText(String(seleccionQuesoDescripcion))
-        self.etiquetaIngre_1.setText(String(seleccionIngrediente_Uno))
+        
+        self.etiquetaIngre_1.setText(String(seleccionIngrediente_Descripcion_Uno))
+        self.etiquetaIngre_2.setText(String(seleccionIngrediente_Descripcion_Dos))
+        self.etiquetaIngre_3.setText(String(seleccionIngrediente_Descripcion_Tres))
+        self.etiquetaIngre_4.setText(String(seleccionIngrediente_Descripcion_Cuatro))
+        self.etiquetaIngre_5.setText(String(seleccionIngrediente_Descripcion_Cinco))
     }
 
     override func willActivate() {
@@ -89,6 +104,7 @@ class vistaConfirmacion: WKInterfaceController {
     
     
     @IBAction func actionSalir() {
+        
         
         //
     }
